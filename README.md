@@ -69,16 +69,18 @@ git remote rm <remote>
 remove a remote
 
 
-Branches
-Show
+# Branches
+## Show
 git branch -a - show all local branches
 git branch -r - show remote branches
 Git branch -vv - very verbose output
-Rename
+  
+## Rename
 git branch -m <old_branch_nm> <new_branch_nm> - rename branch
-Change tracking branch
+## Change tracking branch
 git branch branch_name -u your_new_remote/branch_name
-Delete
+  
+## Delete
 
 git branch -d <branch>
 delete a branch ONLY if it’s merged
@@ -223,27 +225,30 @@ Pull changes from remote upstream branch ‘master’ into current branch, rebas
 
 
 
-Fixing things
-Reset Working Area
+## Fixing things
+### Reset Working Area
+  
 git reset --hard HEAD
-Reset working area to HEAD
+* Reset working area to HEAD
+  
 git reset --hard HEAD^
-Reset to before last commit
+* Reset to before last commit
+  
 git reset --soft HEAD^
-Move last commit back to staging area
+* Move last commit back to staging area
 
 
 git reset --soft <remote ref>
-
 git reset --soft master 
 Move local back to HEAD of remote ref
-
-
+  
 git reset HEAD <file> 
 Reset file from staging area into working area
+  
 git reset --hard <remote ref>
 Reset current branch to state of <remote ref>
 Common case: ref is remote/branch
+
 git clean -f -d
 remove untracked files and directories from working area
 
