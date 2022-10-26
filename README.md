@@ -233,47 +233,23 @@ Pull changes from remote upstream branch ‘master’ into current branch, rebas
 `git reset --soft master`
 * Move local back to HEAD of remote ref
   
-git reset HEAD <file> 
-Reset file from staging area into working area
+`git reset HEAD <file>`
+* Reset file from staging area into working area
   
-git reset --hard <remote ref>
-Reset current branch to state of <remote ref>
-Common case: ref is remote/branch
+`git reset --hard <remote ref>`
+* Reset current branch to state of <remote ref>
+  Common case: ref is remote/branch
 
-git clean -f -d
-remove untracked files and directories from working area
+`git clean -f -d`
+* remove untracked files and directories from working area
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Files
-
-
-
-
-
-
-
-
+## Files
 
 git checkout -- <file>  
 revert particular file(s) to last committed revision
 
 
-Commits
+## Commits
 
 git commit --amend -m "new msg"
 Change commit message of last commit
