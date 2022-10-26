@@ -114,7 +114,7 @@ git checkout -- <file>  -- revert particular file(s) to last committed revision
 Copy a file
 git checkout <otherbranch> <file> - checkout (copy) a single file from a branch into current
 
-Synching
+# Synching
 
 git fetch origin 
 git reset --hard origin/master
@@ -126,7 +126,7 @@ Reset local repository branch to mirror remote repository HEAD
 
 
 
-Patches
+# Patches
 
 git diff master..doco > ~/http.rst.patch  - create a patch for the changes in doco relative to master, save to a file
 
@@ -147,7 +147,7 @@ git add -A file... - add all files, including deletes
 git add --patch <files...> - interactively add sections of file modifications
 git add --interactive - more powerful mode of above
 
-Committing
+## Committing
 
 git commit -m “msg”
 commit staged (added) files, with message
@@ -160,15 +160,7 @@ amend last commit message
 git commit -C <commit>
 commit copying message from another commit (useful when fixing  cherry-picks)
 
-
-
-
-
-
-
-
-
-Squashing 
+## Squashing 
 
 git reset --soft   <commit ref>
 git commit [ -m “msg” ]
@@ -181,8 +173,7 @@ Sqash commits  after <ref> into single commit
 
 
 
-Cherry-picking
-
+## Cherry-picking
 
 git cherry-pick <commit>
 
@@ -195,7 +186,7 @@ Git cherry-pick sha1^..sha2
 Copies commits sha1 thru sha2 INCLUSIVE of sha1
 
 
-Pushing
+## Pushing
 
 git push origin
 Push changes from current local branch to remote “origin” branch with same name
@@ -228,19 +219,19 @@ Pull changes from remote upstream branch ‘master’ into current branch, rebas
 ## Fixing things
 ### Reset Working Area
   
-git reset --hard HEAD
+`git reset --hard HEAD`
 * Reset working area to HEAD
   
-git reset --hard HEAD^
+`git reset --hard HEAD^`
 * Reset to before last commit
   
-git reset --soft HEAD^
+`git reset --soft HEAD^`
 * Move last commit back to staging area
 
 
-git reset --soft <remote ref>
-git reset --soft master 
-Move local back to HEAD of remote ref
+`git reset --soft <remote ref>`
+`git reset --soft master`
+* Move local back to HEAD of remote ref
   
 git reset HEAD <file> 
 Reset file from staging area into working area
