@@ -1,13 +1,10 @@
 # Git Commands
 
-Config
+## Config
 
-git config --global user.email mtnclimb@gmail.com
+`git config --global user.email mtnclimb@gmail.com`
 
-
-
-
-Reporting
+## Reporting
 
 git diff --name-status <commit1>..<commit2>
 reports files in diff between two commits.  Commits can be branch names as well
@@ -22,9 +19,7 @@ shows log for me
 git whatchanged
 show files that changed in each commit
 
-
-
-Creating repos
+## Creating repos
 
 git clone ~/proj/geoserver/git/geoserver geoserver
 git clone ~/proj/geotools/git/geotools geotools
@@ -38,10 +33,7 @@ clones github repo “geoserver” into current dir
 git clone https://github.com/dr-jts/jeql
 clones Github repo into curent dir
 
-
-
-
-Remotes
+## Remotes
 
 git remote add upstream git://github.com/geoserver/geoserver.git
 
@@ -93,11 +85,7 @@ Git fetch --prune
 clean up deleted remote branches
 
 
-Checkout
-
-
-
-
+## Checkout
 
 git checkout -b 21x origin/2.1.x
 Create a branch 21x tracking a remote branch “2.1.x”
@@ -120,12 +108,6 @@ git fetch origin
 git reset --hard origin/master
 Reset local repository branch to mirror remote repository HEAD
 
-
-
-
-
-
-
 # Patches
 
 git diff master..doco > ~/http.rst.patch  - create a patch for the changes in doco relative to master, save to a file
@@ -134,13 +116,14 @@ git diff --name-only master..gcstrans - only show names of modified files
 
 git apply <patch> - apply the patch file to the current branch (without commiting)
 
-Status
+# Status
 
 git status -u --ignored  - show ignored files in status
 
-History / Log
+# History / Log
 git log
-Adding
+
+# Adding
 
 git add file...
 git add -A file... - add all files, including deletes
@@ -165,26 +148,18 @@ commit copying message from another commit (useful when fixing  cherry-picks)
 git reset --soft   <commit ref>
 git commit [ -m “msg” ]
 
-
 Sqash commits  after <ref> into single commit
-
-
-
-
-
 
 ## Cherry-picking
 
 git cherry-pick <commit>
 
-
 copies commit into current branch.  If commit is clean it is added.  
 If not clean, contents are added to staging/working area for fixup.  To revert use git reset --hard HEAD.  To commit with original message use git commit -C <commit>
 
 
-Git cherry-pick sha1^..sha2
+git cherry-pick sha1^..sha2
 Copies commits sha1 thru sha2 INCLUSIVE of sha1
-
 
 ## Pushing
 
@@ -242,6 +217,9 @@ Pull changes from remote upstream branch ‘master’ into current branch, rebas
 
 `git clean -f -d`
 * remove untracked files and directories from working area
+ 
+`git clean -d -f -x`
+* remove all untracked objects from working area
 
 ## Files
 
